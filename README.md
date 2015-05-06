@@ -2,6 +2,19 @@
 
 This is a simple file upload plugin depends on HTML5. You can use it to mordern browser.
 
+### Install
+
+install by bower:
+
+```
+bower install h5uploader --save
+```
+or: 
+
+```
+git clone https://github.com/wewoor/h5uploader.git
+```
+
 ### Example
 
 Import this script in you html page:

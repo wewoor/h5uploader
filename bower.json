@@ -1,0 +1,22 @@
+{
+  "name": "h5uploader",
+  "version": "1.0.0",
+  "homepage": "https://github.com/wewoor/h5uploader",
+  "authors": [
+    "Ziv"
+  ],
+  "description": "HTML5 file uploader",
+  "main": "h5uploader.js",
+  "keywords": [
+    "HTML5",
+    "uploader"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
