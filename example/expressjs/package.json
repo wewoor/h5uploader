@@ -1,0 +1,23 @@
+{
+  "name": "html5uploader",
+  "version": "1.0.0",
+  "description": "exmaple for upload",
+  "main": "app.js",
+  "scripts": {
+    "test": "node",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "html5upload"
+  ],
+  "author": "Ziv",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "^3.3.5",
+    "connect-busboy": "0.0.2",
+    "connect-form": "^0.2.1",
+    "express": "^4.12.3",
+    "fs-extra": "^0.18.2",
+    "multer": "^0.1.8"
+  }
+}

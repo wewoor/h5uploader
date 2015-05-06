@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
+
+<body>
+    <h1>H5 file upload demo</h1>
+    <input type="file" id="myfile0" value="" name="myfile0" multiple="multiple"/>
+    <input type="file" id="myfile1" value="" name="myfile1" multiple="multiple"/>
+    <button id="uploader">Upload</button>
+    <script type="text/javascript" src="h5uploader.js"></script>
+    <script type="text/javascript">
+    var uploader = document.getElementById('uploader');
+    uploader.addEventListener("click", function(e) {
+
+        H5Uploader.upload({
+            action: 'upload',
+            id: 'myfile0',
+            size: {
+                max: 5000, // 5000kb 
+                valide: function(e) {
+                    if (e) {
+                        alert("The size of " + e.name + " is exceed max value!");
+                    }
+                }
+            }, // MB
+            type: {
+                name: 'csv;png;jpg',
+                valide: function(e) {
+                    if (e) {
+                        alert("The type of " + e.name + " is not supported!");
+                    }
+                }
+            },
+            progress: function() {
+                    var p = document.createElement('p');
+                    p.innerHTML = "uploading";
+                    p.id = "loading";
+                    document.body.appendChild(p);
+            },
+            success: function(data) {
+                alert(data);
+                if (data && data == 200) {
+                    document.getElementById('loading').innerHTML = "The file upload successfully!";
+                    alert("The file upload successfully.");
+                }
+            },
+            fail: function(data) {
+
+            }
+        });
+
+    }, false);
+    </script>
+</body>
+
+</html>
