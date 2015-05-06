@@ -1,7 +1,13 @@
-/**
- * Html5 file uploader
- * Author Ziv
- */
+/**!
+ * h5uploader.js
+ * This is a simple file upload plugin depends on HTML5. 
+ * You can use it to mordern browser.
+ * 
+ * version: 1.0
+ * Copyright 2015, Ziv | http://imziv.com
+ * Released under the MIT License
+ * https://github.com/wewoor/h5uploader
+ **/
 
 (function(window) {
 
