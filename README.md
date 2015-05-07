@@ -26,23 +26,28 @@ Import this script in you html page:
 #### html
 
 ```html
-<input type="file" id="myfile"  name="myfile" multiple="multiple"/>
+<input type="file" id="myfile" value="" name="myfile" multiple="multiple"/>
+<button id="uploader">Upload</button>
 ```
 
 #### Javascript
 
 ```javascript
-H5Uploader.upload({
+<script type="text/javascript">
+    var uploader = document.getElementById('uploader');
+    uploader.addEventListener("click", function(e) {
+
+        H5Uploader.upload({
             action: 'upload',
-            id: 'myfile', // <input id="myfile" type="file"/>
+            id: 'myfile',
             size: {
-                max: 5000, // 5000 KB
+                max: 5000, // 5000kb 
                 valide: function(e) {
                     if (e) {
                         alert("The size of " + e.name + " is exceed max value!");
                     }
                 }
-            },
+            }, // MB
             type: {
                 name: 'csv;png;jpg',
                 valide: function(e) {
@@ -58,18 +63,22 @@ H5Uploader.upload({
                     document.body.appendChild(p);
             },
             success: function(data) {
+                alert(data);
                 if (data && data == 200) {
                     document.getElementById('loading').innerHTML = "The file upload successfully!";
                     alert("The file upload successfully.");
                 }
             },
             fail: function(data) {
-					alert("upload fail!");
+
             }
         });
+
+    }, false);
+    </script>
 ```
 
-**more examples and demos can be found on [`/example`](https://github.com/wewoor/h5uploader/tree/master/example) directory.**
+**more examples and demos can be found in [`/example`](https://github.com/wewoor/h5uploader/tree/master/example) directory.**
 
 ### H5uploader options
 
