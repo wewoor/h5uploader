@@ -85,7 +85,7 @@
                     var evt = this.checkSize(file.files, literals.size.max);
                     if (evt) {
                         if (literals.size.valide) literals.size.valide(evt);
-                        throw new Error('The upload file size beyond max value.');
+                        throw new Error('The upload file size exceed max value.');
                     }
                 }
 

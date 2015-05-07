@@ -12,22 +12,26 @@
     <button id="uploader">Upload</button>
     <script type="text/javascript" src="html5uploader.js"></script>
     <script type="text/javascript">
-    var uploader = document.getElementById('uploader');
-    uploader.addEventListener("click", function(e) {
+     var uploader = document.getElementById('uploader');
+        uploader.addEventListener("click", function(e) {
 
         H5Uploader.upload({
-            action: '/upload',
-            file: 'myfile',
+            action: 'upload',
+            id: 'myfile0',
             size: {
-                max: 5000, // Kb 5MB
-                message: function(e) {
-                    console.log(e);
+                max: 5000, // 5000kb 
+                valide: function(e) {
+                    if (e) {
+                        alert("The size of " + e.name + " is exceed max value!");
+                    }
                 }
             }, // MB
             type: {
-                name: 'html',
-                message: function(e) {
-                    console.log(e);
+                name: 'csv;png;jpg',
+                valide: function(e) {
+                    if (e) {
+                        alert("The type of " + e.name + " is not supported!");
+                    }
                 }
             },
             progress: function() {
@@ -37,7 +41,11 @@
                     document.body.appendChild(p);
             },
             success: function(data) {
-
+                alert(data);
+                if (data && data == 200) {
+                    document.getElementById('loading').innerHTML = "The file upload successfully!";
+                    alert("The file upload successfully.");
+                }
             },
             fail: function(data) {
 
