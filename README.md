@@ -86,7 +86,6 @@ name | type | description
 ------|-----|---------|----
 action | string | file upload request path
 id | string | input element id,`example: <input id="myfile"/>` 
-action | string | file upload request path
 size | object | validate file size
 type | object | validate file type
 progress | function | progress for upload
