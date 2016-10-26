@@ -1,0 +1,26 @@
+{
+  "name": "h5uploader",
+  "version": "1.0.0",
+  "description": "easy to upload file using HTML5 tech.",
+  "main": "h5uploader.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wewoor/h5uploader.git"
+  },
+  "keywords": [
+    "HTML5",
+    "upload"
+  ],
+  "author": "Ziv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wewoor/h5uploader/issues"
+  },
+  "homepage": "https://github.com/wewoor/h5uploader#readme"
+}
