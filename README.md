@@ -2,7 +2,7 @@
 
 This is a simple file upload plugin depends on HTML5. You can use it to mordern browser.
 
-### Install
+## Install
 
 install by bower:
 
@@ -15,7 +15,7 @@ or:
 git clone https://github.com/wewoor/h5uploader.git
 ```
 
-### Example
+## Example
 
 Import this script in you html page:
 
@@ -23,14 +23,14 @@ Import this script in you html page:
 <script type="text/javascript" src="h5uploader.js"></script>
 ```
 
-#### html
+### html
 
 ```html
 <input type="file" id="myfile" value="" name="myfile" multiple="multiple"/>
 <button id="uploader">Upload</button>
 ```
 
-#### Javascript
+### Javascript
 
 ```javascript
 <script type="text/javascript">
@@ -80,7 +80,7 @@ Import this script in you html page:
 
 **more examples and demos can be found in [`/example`](https://github.com/wewoor/h5uploader/tree/master/example) directory.**
 
-### H5uploader options
+## Options
 
 name | type | description
 | - | - | - |
