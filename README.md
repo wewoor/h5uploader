@@ -83,7 +83,7 @@ Import this script in you html page:
 ### H5uploader options
 
 name | type | description
-------|-----|---------|----
+| - | - | - |
 action | string | file upload request path
 id | string | input element id,`example: <input id="myfile"/>` 
 size | object | validate file size
